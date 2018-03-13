@@ -14,8 +14,7 @@ Abrimos `http://localhost:4200/` en el navegador.
 
 ## Build
 
-El proyecto también ha sido compilado para una versión de producción que se encuentra en la carpeta `dist`. 
-Para ejecutar esta versión necesitaremos poner esa carpeta en un servidor.
+Para generar una versión de producción ejecutamos `ng build --prod` que nos generará el directorio `dist`, que a su vez debemos meter en un servidor para que pueda ser ejecutado. 
 
 
 ## El directorio `src`
