@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import 'css/base/vars.scss';
+@import 'css/base/utils.scss';
+@import 'css/base/layout.scss';
+@import 'css/base/fonts.scss';
+@import "css/base/animations";
+@import 'css/components/module';
+
+
+@import 'css/lib/normalize.7.0.0.css';
+@import 'css/blocks/_b_sample.scss';
+

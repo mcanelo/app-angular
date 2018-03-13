@@ -1,0 +1,70 @@
+//Radio buttons
+.btn-radio{
+  width: 90%;
+  height: 35px;
+}
+
+/* Customize the label (the container) */
+.btn-radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9fb;
+  padding: 5px;
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn-radio input {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio {
+  position: absolute;
+  top: 6px;
+  left: 12px;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.btn-radio input:checked ~ .radio {
+  background-color: #ffffff;
+  border: 1px solid #6dc138;
+
+}
+
+.btn-radio {
+  & input:checked + .btn-radio{
+    border: 1px solid #164a7c;
+  }
+
+}
+
+.radio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.btn-radio input:checked ~ .radio:after {
+  display: block;
+}
+
+.btn-radio .radio:after {
+  top: 3px;
+  left: 3px;
+  width: 12px;
+  height: 11px;
+  border-radius: 50%;
+  background: #6dc138;
+}

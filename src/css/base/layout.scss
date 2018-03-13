@@ -1,0 +1,65 @@
+*{
+  box-sizing: border-box;
+}
+
+body, html{
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  background-color: $c-body-bg;
+  padding: 0px 40px 0px 40px;
+  background-color: #fafafa;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+
+}
+
+nav{
+  height: 45px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: #FFFFFF;
+  border: 1px solid $c-grid-border;
+}
+
+section{
+  min-height: calc(100vh - 55px);
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-color: $c-grid-border;
+  padding: 20px;
+}
+
+.row {
+  width: 100%;
+  clear: both;
+  @extend %clearfix;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: $medium-desktop;
+/*  padding-left: 32px;
+  padding-right: 32px;*/
+  margin-right: auto;
+  margin-left: auto;
+  clear: both;
+  @extend %clearfix;
+}
+
+@media only screen and (min-width: $mobile) and (max-width: $tablet) {
+
+  body{
+    padding: 0;
+  }
+
+}
+
+
+
+
+
