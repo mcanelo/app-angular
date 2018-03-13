@@ -1,27 +1,51 @@
 # AppAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.2.
+Proyecto generado con  [Angular CLI](https://github.com/angular/angular-cli) versión 1.7.2. y Node: 9.7.1 Es recomendable usar las mismas versiónes. 
+
+## Install
+
+Para instalar el proyecot ejecutamos `npm install`
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Para ejecutar el proyecto en modo desarollo usamos `ng serve`. 
+Abrimos `http://localhost:4200/` en el navegador. 
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+El proyecto también ha sido compilado para una versión de producción que se encuentra en la carpeta `dist`. 
+Para ejecutar esta versión necesitaremos poner esa carpeta en un servidor.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## El directorio `src`
 
-## Running end-to-end tests
+El código de la aplicación se encuentra en este directorio. Todos los componentes, plantillas, imagenes y en general cualquier cosa que necesite tu aplicación irá aqui.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```text
 
-## Further help
+ src/
+   |── app/
+      ├── core/
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+Dentro de core irá cada componente independiente que a su vez puede contener otros componentes. Cada uno lleva un fichero .ts, .html y .scss
+Las carpetas model contienen modelos que se manejan en vista y los utilizamos para limpiar los controladores de variables. 
+
+
+## El directorio `css`
+
+```text
+
+ src/
+   |── css/
+      ├── base/
+      ├── blocks/
+      ├── components/
+      ├── lib/
+
+```
+
+En el directorio css se encuentran los estilos genéricos de la aplicación. 
+Además de la estructura propuesta por Cocktail, hemos añadido algunos ficheros en el directorio base, 
+para añadir animaciones y fuentes, y la carpeta componentes, dónde se establecen los componentes customizados.
