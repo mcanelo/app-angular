@@ -1,0 +1,26 @@
+<header>
+
+    <h3>
+        HOTEL <b>Mieres del Camín Apartamentos</b>
+        <i class="icon icon-star"></i>
+        <i class="icon icon-star"></i>
+        <i class="icon icon-star"></i>
+        <i class="icon icon-star"></i>
+    </h3>
+
+</header>
+
+<div class="wrapper">
+
+    <div class="card-container" *ngIf="servicesList">
+
+        <app-card class="card"
+                  *ngFor="let service of servicesList"
+                  [dataToLoad]="service"
+                  (emitSelected)="setSelectedPlan( $event )"
+                  >
+        </app-card>
+
+    </div>
+
+</div>

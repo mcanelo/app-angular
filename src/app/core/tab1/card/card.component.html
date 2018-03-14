@@ -1,0 +1,34 @@
+<div class="card-container" [ngClass]="{'plan_selected' :  data.selected}">
+
+    <div class="card-header">
+
+        <span> {{data.name}} </span>
+
+    </div>
+
+    <hr>
+
+    <div class="card-body">
+
+        <div class="card-content">
+
+            <ul>
+                <li *ngFor="let option of data.options"> {{option}} </li>
+            </ul>
+
+        </div>
+
+        <div class="card-footer" [ngClass]="{'disabled' :  !data.selected}">
+
+            <label class="btn-radio" [ngClass]="{'plan_selected' :  data.selected}"> Elegir régimen
+                <input type="radio" name="planType" #radio value="true" (change)="selectPlan(radio.value)">
+                <span class="radio"></span>
+            </label>
+
+        </div>
+
+    </div>
+
+
+
+</div>

@@ -1,0 +1,45 @@
+@import './../../../css/base/vars.scss';
+@import './../../../css/base/utils.scss';
+
+.nav-tabs{
+  width: 300px;
+  border: 0;
+  float: right;
+  font-size: 1rem;
+  display: flex;
+  margin-bottom: 0;
+  list-style: none;
+  li.nav-item{
+    margin-right: 2rem;
+    cursor: pointer;
+    color: $c-blue-light;
+    outline: none;
+    width: 100px;
+    text-align: center;
+    padding-bottom: 10px;
+    @include fontType($f-titles, 16px, 400, $c-blue-light);
+    &.active{
+      border-bottom: 3px solid $c-blue-dark;
+      color: $c-blue-dark;
+    }
+    &:not(.active):hover{
+      border-top-color: yellow;
+      h2, h3{
+        font-size: inherit;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile) and (max-width: $tablet) {
+
+  .nav-tabs{
+    padding-left: 0;
+    width: 100%;
+    li.nav-item{
+      width: 50%;
+      margin: 0;
+    }
+  }
+
+}

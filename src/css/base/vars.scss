@@ -1,0 +1,24 @@
+// Colors
+$c-blue-dark:   #164a7c;
+$c-blue-light: #6fb9f2;
+$c-textImportant: #105aa3;
+$c-blue-dark: #1e3458;
+$c-black: #000000;
+$c-red: #e82e34;
+$c-yellow: #fac937;
+$c-white: #ffffff;
+$c-body-bg: #fafafa;
+$c-grid-border: #e1e2e7;
+$c-text-disabled: #616469;
+
+// Typography
+$f-basic: 'Roboto',      sans-serif;
+$f-titles: 'Roboto Slab',   sans-serif;
+
+// MediaQueries Breakpoints
+// See https://github.com/carloscabo/mqbe and ./utils for both js and sass media queries helpers
+$mobile: 360px;
+$tablet: 768px;
+$small-desktop:  1024px;
+$medium-desktop: 1264px;
+

@@ -1,0 +1,106 @@
+//
+// Responsive helpers
+//
+@mixin media($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// @include clearfix()
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// @extend %clearfix
+%clearfix {
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+//flex mixins
+@mixin flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex_start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+
+@mixin title {
+  text-align: center;
+  color: $c-blue-dark;
+  font-weight: bold;
+}
+
+@mixin fontType($family, $size, $weight, $color){
+  color: $color;
+  font-family: $family, serif;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+.cursor_pointer{
+  cursor: pointer;
+}
+
+._marginl_10{
+  margin-left: 10px
+}
+
+._paddingl_15{
+  padding-left: 15px;
+}
+
+.expand_arrow{
+  width: 20px;
+  margin-right: 10px;
+}
+
+.arrow_up{
+  transform: rotate(180deg);
+}
+
+.arrow_secondary{
+  width: 15px;
+  color: $c-blue-light;
+}
+
+.icon {
+  color: $c-blue-light;
+}
+
+.shorten_text{
+  max-height: 3rem;
+  overflow: hidden;
+}
+
+.shorten_text:after {
+  content:'...';
+  position: inherit;
+  top: calc(3rem - 1.5rem);
+  right: 0;
+}
+
+.show_text{
+  max-height: 100%;
+  overflow:visible !important;
+}

@@ -1,0 +1,61 @@
+@import './../../../../css/base/vars';
+@import './../../../../css/base/utils';
+
+.accordion-container,
+.accordion-header{
+  background-color: $c-white;
+}
+
+.accordion-container{
+  border: 1px solid $c-grid-border;
+  padding: 10px;
+  margin-bottom: 20px;
+
+}
+
+.accordion-header{
+  @include flex_start;
+  height: 60px;
+  padding: 15px;
+  position: relative;
+}
+
+.exclusive{
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: $c-red;
+  padding: 5px;
+  @include fontType($f-basic, 12px, 400, $c-white);
+}
+
+.title_1{
+  @include fontType($f-titles, 24px, 700, $c-blue-light);
+}
+
+.optional{
+  @include fontType($f-basic, 15px, 700, $c-blue-dark);
+}
+
+@media only screen and (max-width: 590px) {
+  .exclusive{
+    position: absolute;
+    width: 100%;
+    top: -10px;
+    right: 0;
+    left: -10px;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: $mobile) and (max-width: $tablet) {
+  .accordion-header {
+    padding-top: 30px;
+    height:70px;
+    flex-wrap: wrap;
+  }
+  .title_1{
+    @include fontType($f-titles, 18px, 700, $c-blue-light);
+  }
+
+}

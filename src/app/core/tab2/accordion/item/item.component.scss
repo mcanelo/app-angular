@@ -1,0 +1,106 @@
+@import './../../../../../css/base/vars';
+@import './../../../../../css/base/utils';
+
+.item-container{
+  border: 1px solid $c-grid-border;
+  margin-bottom: 10px;
+}
+
+.item-header{
+  display: flex;
+}
+
+.info-container{
+  font-size: .9rem;
+}
+
+.img-container{
+  min-width: 200px;
+  background-size: cover;
+  height: 140px;
+}
+
+.text-container{
+  padding: 10px 0 0 20px;
+  width: 70%;
+  line-height: 1.5rem;
+}
+
+.info-container{
+  padding: 20px 20px 10px 0px;
+  span{
+    padding-left: 25px;
+  }
+}
+
+ul{
+  width: 86%;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @media only screen and (max-width: 1200px) {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+li{
+  width: 300px;
+  line-height: 1.6;
+}
+
+.icon{
+  color: $c-blue-light;
+  font-size: .8rem;
+}
+
+.title_2{
+  @include fontType($f-titles, 18px, 700, $c-blue-dark);
+}
+
+.more_info{
+  @include fontType($f-basic, 14px, 700, $c-blue-light);
+  cursor: pointer;
+}
+
+.text{
+  @include fontType($f-basic, 14px, 400, $c-black);
+}
+
+.warning{
+  @include fontType($f-basic, 14px, 700, $c-blue-dark);
+}
+
+@media only screen and (max-width: $tablet) {
+  .item-header{
+    flex-wrap: wrap;
+  }
+  .img-container{
+    background-size: cover;
+    background-position-y: inherit;
+    min-width: 100%;
+  }
+  .text-container{
+    width: 100%;
+  }
+  .info-container{
+    padding: 10px;
+    span{
+      padding: 0;
+    }
+  }
+
+  li{
+    width: 100%;
+  }
+
+}
+
+@media only screen and (min-width: $mobile) and (max-width: $tablet) {
+  ul{
+    padding-left: 0;
+    list-style: none;
+  }
+}
